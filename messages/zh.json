@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "title": "3D足迹 - 沉浸式旅行地图",
+    "description": "在交互式3D地球上可视化您的旅行历史。上传带有GPS数据的照片，创建精美的旅行故事。"
+  },
+  "common": {
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "close": "关闭",
+    "reset": "重置",
+    "search": "搜索标题、年份(2024)...",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "back": "返回",
+    "next": "下一步",
+    "done": "完成",
+    "error": "错误",
+    "success": "成功",
+    "warning": "警告",
+    "info": "信息",
+    "unknown": "未知",
+    "photo": "照片",
+    "unnamed": "未命名回忆"
+  },
+  "auth": {
+    "signIn": "登录",
+    "signOut": "登出",
+    "signUp": "注册"
+  },
+  "language": {
+    "title": "选择语言",
+    "description": "选择您偏好的语言",
+    "english": "English",
+    "chinese": "中文"
+  },
+  "home": {
+    "welcome": "欢迎使用 3D足迹",
+    "subtitle": "您的个人旅行可视化平台",
+    "getStarted": "开始使用",
+    "features": {
+      "title": "功能特色",
+      "upload": "上传带GPS数据的照片",
+      "visualize": "在3D地球上可视化",
+      "explore": "探索战争迷雾",
+      "aiDiary": "AI生成旅行日记"
+    }
+  },
+  "map": {
+    "console": "控制台",
+    "uploadPhoto": "上传照片",
+    "fixLocation": "修改定位",
+    "exploreMode": "探索模式",
+    "exitExplore": "退出探索",
+    "storyMode": "沉浸故事",
+    "generateReport": "生成报告",
+    "city": "城市",
+    "province": "省级",
+    "country": "国家",
+    "timeline": "时间轴",
+    "timeFilter": "时间筛选",
+    "all": "全部",
+    "recentYear": "近一年",
+    "listView": "列表视图",
+    "gridView": "网格视图",
+    "zoom": "缩放",
+    "noPhotos": "暂无照片",
+    "uploadPrompt": "上传照片，点亮你的世界",
+    "noResults": "未找到匹配照片",
+    "locating": "定位中...",
+    "locationError": "定位错误",
+    "permissionDenied": "请允许位置权限",
+    "positionUnavailable": "位置信息不可用",
+    "timeout": "定位超时",
+    "myLocation": "我的位置"
+  },
+  "upload": {
+    "title": "上传照片",
+    "parsingGPS": "解析GPS...",
+    "gettingLocation": "获取地名...",
+    "requestingPermission": "申请权限...",
+    "uploading": "上传云端...",
+    "saving": "保存数据...",
+    "success": "完成！",
+    "failed": "失败"
+  },
+  "locationFix": {
+    "selectPhoto": "选择要修改的照片",
+    "selectDescription": "点击照片进入定位修正模式",
+    "totalPhotos": "共 {count} 张照片",
+    "startFix": "点击照片开始修改定位",
+    "fixing": "修正定位中...",
+    "clickMap": "点击地图选点或手动输入",
+    "latitude": "纬度 (Lat)",
+    "longitude": "经度 (Lng)",
+    "confirmSave": "确认修改并保存"
+  },
+  "story": {
+    "title": "故事模式",
+    "exit": "退出故事",
+    "scrollHint": "滚动探索您的旅程"
+  },
+  "report": {
+    "title": "足迹报告",
+    "visitedAreas": "已探索区域",
+    "totalPhotos": "照片总数",
+    "countries": "国家",
+    "cities": "城市",
+    "generating": "生成报告中..."
+  }
+}

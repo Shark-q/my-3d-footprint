@@ -1,0 +1,39 @@
+{
+  "name": "my-3d-footprint",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^6.35.5",
+    "@supabase/supabase-js": "^2.86.0",
+    "@turf/turf": "^7.3.0",
+    "exif-js": "^2.3.0",
+    "html2canvas": "^1.4.1",
+    "mapbox-gl": "^2.15.0",
+    "next": "^16.0.4",
+    "next-intl": "^4.8.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.22.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/mapbox-gl": "^3.4.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.4",
+    "prisma": "^5.22.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

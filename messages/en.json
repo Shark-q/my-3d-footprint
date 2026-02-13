@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "title": "3D Footprint - Your Immersive Journey Map",
+    "description": "Visualize your travel history on an interactive 3D globe. Upload photos with GPS data and create beautiful travel stories."
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "reset": "Reset",
+    "search": "Search by title or year(2024)...",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Info",
+    "unknown": "Unknown",
+    "photo": "Photo",
+    "unnamed": "Unnamed Memory"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "signUp": "Sign Up"
+  },
+  "language": {
+    "title": "Select Language",
+    "description": "Choose your preferred language",
+    "english": "English",
+    "chinese": "中文"
+  },
+  "home": {
+    "welcome": "Welcome to 3D Footprint",
+    "subtitle": "Your personal travel visualization platform",
+    "getStarted": "Get Started",
+    "features": {
+      "title": "Features",
+      "upload": "Upload photos with GPS data",
+      "visualize": "Visualize on 3D globe",
+      "explore": "Explore with fog of war",
+      "aiDiary": "AI-generated travel diaries"
+    }
+  },
+  "map": {
+    "console": "Console",
+    "uploadPhoto": "Upload Photo",
+    "fixLocation": "Fix Location",
+    "exploreMode": "Explore Mode",
+    "exitExplore": "Exit Explore",
+    "storyMode": "Story Mode",
+    "generateReport": "Generate Report",
+    "city": "City",
+    "province": "Province",
+    "country": "Country",
+    "timeline": "Timeline",
+    "timeFilter": "Time Filter",
+    "all": "All",
+    "recentYear": "Recent Year",
+    "listView": "List View",
+    "gridView": "Grid View",
+    "zoom": "Zoom",
+    "noPhotos": "No photos yet",
+    "uploadPrompt": "Upload photos to light up your world",
+    "noResults": "No matching photos",
+    "locating": "Locating...",
+    "locationError": "Location error",
+    "permissionDenied": "Please allow location permission",
+    "positionUnavailable": "Position unavailable",
+    "timeout": "Location timeout",
+    "myLocation": "My Location"
+  },
+  "upload": {
+    "title": "Upload Photo",
+    "parsingGPS": "Parsing GPS...",
+    "gettingLocation": "Getting location name...",
+    "requestingPermission": "Requesting permission...",
+    "uploading": "Uploading to cloud...",
+    "saving": "Saving data...",
+    "success": "Success!",
+    "failed": "Failed"
+  },
+  "locationFix": {
+    "selectPhoto": "Select Photo to Fix",
+    "selectDescription": "Click a photo to enter location fix mode",
+    "totalPhotos": "Total {count} photos",
+    "startFix": "Click photo to start fixing location",
+    "fixing": "Fixing Location...",
+    "clickMap": "Click on map or enter coordinates manually",
+    "latitude": "Latitude (Lat)",
+    "longitude": "Longitude (Lng)",
+    "confirmSave": "Confirm & Save"
+  },
+  "story": {
+    "title": "Story Mode",
+    "exit": "Exit Story",
+    "scrollHint": "Scroll to explore your journey"
+  },
+  "report": {
+    "title": "Footprint Report",
+    "visitedAreas": "Visited Areas",
+    "totalPhotos": "Total Photos",
+    "countries": "Countries",
+    "cities": "Cities",
+    "generating": "Generating report..."
+  }
+}

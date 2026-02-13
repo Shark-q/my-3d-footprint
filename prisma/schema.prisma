@@ -1,0 +1,114 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"] // 开启扩展支持
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
+  extensions = [postgis] // 声明需要 PostGIS
+}
+
+// 用户表
+model User {
+  id          String      @id @default(uuid())
+  clerkId     String      @unique
+  email       String      @unique
+  tier        String      @default("FREE") // FREE, PRO
+  storageUsed BigInt      @default(0)
+  aiCredits   Int         @default(10)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  journeys    Journey[]
+  UserStory   UserStory[]
+
+  @@map("users")
+}
+
+// 旅程表
+model Journey {
+  id        String      @id @default(uuid())
+  title     String
+  isPublic  Boolean     @default(false)
+  userId    String
+  user      User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  photos    PhotoNode[]
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  UserStory UserStory[]
+
+  @@map("journeys")
+}
+
+model PhotoNode {
+  id          String                                @id @default(uuid())
+  location    Unsupported("geography(Point, 4326)")
+  takenAt     DateTime
+  weatherInfo Json?
+
+  locationName String? // 例如: "中国北京市朝阳区..."
+  caption      String? @db.Text // 用户自己写的描述/日记
+
+  aiDiaryText String? @db.Text // AI 润色后的长文
+  s3Key       String
+  heading     Float?
+
+  // ... 其他保持不变
+  journeyId String
+  journey   Journey  @relation(fields: [journeyId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([location], name: "location_idx", type: Gist)
+  @@map("photo_nodes")
+}
+
+// -----------------------------------------------------------------------------
+// [New] Story Mode 2.0 Models
+// -----------------------------------------------------------------------------
+
+// 故事模板 (官方/UGC)
+model StoryTemplate {
+  id          String  @id @default(uuid())
+  name        String // e.g. "3天2夜城市漫游"
+  description String?
+  category    String // "City", "Nature", "Vlog"
+  duration    Int // 目标时长 (秒)
+
+  // 模板配置 (JSON): 包含 镜头策略/转场/BGM推荐 等
+  config Json
+
+  isPremium  Boolean  @default(false)
+  usageCount Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  userStories UserStory[]
+
+  @@map("story_templates")
+}
+
+// 用户生成的视频作品
+model UserStory {
+  id         String  @id @default(uuid())
+  userId     String
+  journeyId  String
+  templateId String?
+
+  // 视频导出状态
+  status   String  @default("draft") // draft, rendering, completed, failed
+  videoUrl String? // 导出后的 MP4 URL (Supabase Storage)
+
+  // 导出参数
+  resolution  String? // "720p", "1080p"
+  aspectRatio String? // "9:16", "1:1", "16:9"
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user     User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  journey  Journey        @relation(fields: [journeyId], references: [id], onDelete: Cascade)
+  template StoryTemplate? @relation(fields: [templateId], references: [id])
+
+  @@map("user_stories")
+}
