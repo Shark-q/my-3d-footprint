@@ -45,3 +45,6 @@ next-env.d.ts
 
 # clerk configuration (can include secrets)
 /.clerk/
+
+# mapbox.html contains sensitive tokens
+mapbox.html
